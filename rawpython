@@ -1,0 +1,282 @@
+import discord
+from discord.ext.commands import bot
+from discord.ext import commands
+import asyncio
+import time
+import random
+
+username = ""
+
+testUsername = "1"
+currUsername = ""
+
+Sebas = 0
+Nico = 0
+Cooper = 0
+Dora = 0
+Jack = 0
+Kieran = 0
+Nathan = 0
+Dylan = 0
+George = 0
+Aqui = 0
+Daniel = 0
+
+in_file = open("sebas.txt","rt")
+Sebas = int(in_file.read())
+in_file.close()
+
+in_file = open("nico.txt","rt")
+Nico = int(in_file.read())
+in_file.close()
+
+
+in_file = open("cooper.txt","rt")
+Cooper = int(in_file.read())
+in_file.close()
+
+in_file = open("dora.txt","rt")
+Dora = int(in_file.read())
+in_file.close()
+
+in_file = open("jack.txt","rt")
+Jack = int(in_file.read())
+in_file.close()
+
+in_file = open("kieran.txt","rt")
+Kieran = int(in_file.read())
+in_file.close()
+
+in_file = open("nathan.txt","rt")
+Nathan = int(in_file.read())
+in_file.close()
+
+in_file = open("dylan.txt","rt")
+Dylan = int(in_file.read())
+in_file.close()
+
+in_file = open("george.txt","rt")
+George = int(in_file.read())
+in_file.close()
+
+in_file = open("aqui.txt","rt")
+Aqui = int(in_file.read())
+in_file.close()
+
+in_file = open("daniel.txt","rt")
+Daniel = int(in_file.read())
+
+
+in_file.close()
+
+Var = "hi Newmarket I'm Dad"
+
+
+Val = 0
+
+
+aqui = 0
+
+
+Client = discord.Client()
+client = commands.Bot(command_prefix = "!")
+
+@client.event
+async def on_ready():
+    print("Bot is ready!")
+    await client.change_presence(game=discord.Game(name='a fun game'))
+@client.event
+async def on_message(message):
+    if message.content == "dad":
+        global Var
+        await client.send_message(message.channel, Var)
+        Var = "hi " + Var + " I'm Dad"
+    if message.content == "pokefuwow":
+        global Val
+        Val = random.randint(1,10)
+        if Val == 1:
+            await client.send_message(message.channel, 'https://imgur.com/a/gHiXzLi')
+        elif Val == 2:
+            await client.send_message(message.channel, 'https://imgur.com/a/RhEywvf')
+        elif Val == 3:
+            await client.send_message(message.channel, 'https://imgur.com/a/JM1cABG')
+        elif Val == 4:
+            await client.send_message(message.channel, 'https://imgur.com/a/vcTbcZo')
+        elif Val == 5:
+            await client.send_message(message.channel, 'https://imgur.com/a/d3OSKkL')
+        elif Val == 6:
+            await client.send_message(message.channel, 'https://imgur.com/a/ZB1mQ3u')
+        elif Val == 7:
+            await client.send_message(message.channel, 'https://imgur.com/a/1X3jTWJ')
+        elif Val == 8:
+            await client.send_message(message.channel, 'https://imgur.com/a/oaqi5mG')
+        elif Val == 9:
+            await client.send_message(message.channel, 'https://imgur.com/a/xYmVy9q')
+        elif Val == 10:
+            await client.send_message(message.channel, 'https://imgur.com/a/7hchD11')
+
+    if message.content == "aqui":
+        global aqui
+        aqui = random.randint(1,16)
+        if aqui == 1:
+            await client.send_message(message.channel, 'https://imgur.com/a/V4s2V4U')
+        if aqui == 2:
+            await client.send_message(message.channel, 'https://imgur.com/a/960TuQH')
+        if aqui == 3:
+            await client.send_message(message.channel, 'https://imgur.com/a/JkPDJdN')
+        if aqui == 4:
+            await client.send_message(message.channel, 'https://imgur.com/a/O3WdvKX')
+        if aqui == 5:
+            await client.send_message(message.channel, 'https://imgur.com/a/f6y0B6J')
+        if aqui == 6:
+            await client.send_message(message.channel, 'https://imgur.com/a/StLJ8bR')
+        if aqui == 7:
+            await client.send_message(message.channel, 'https://imgur.com/a/M2I2UHB')
+        if aqui == 8:
+            await client.send_message(message.channel, 'https://imgur.com/a/Hm3Q40O')
+        if aqui == 9:
+            await client.send_message(message.channel, 'https://imgur.com/a/kBSzZnb')
+        if aqui == 10:
+            await client.send_message(message.channel, 'https://imgur.com/a/DAqeCcY')
+        if aqui == 11:
+            await client.send_message(message.channel, 'https://imgur.com/a/7vblIur')
+        if aqui == 12:
+            await client.send_message(message.channel, 'https://imgur.com/a/WAIsyov')
+        if aqui == 13:
+            await client.send_message(message.channel, 'https://imgur.com/a/DlxAsfu')
+        if aqui == 14:
+            await client.send_message(message.channel, 'https://imgur.com/a/7dvoIkR')
+        if aqui == 15:
+            await client.send_message(message.channel, 'https://imgur.com/a/FTKKPoN')
+        if aqui == 16:
+            await client.send_message(message.channel, 'https://imgur.com/a/5RQryws')
+
+    if message.content == "work":
+        global username
+        global saveFile
+        global Sebas
+        global Nico
+        global Cooper
+        global Dora
+        global Jack
+        global Kieran
+        global Nathan
+        global Dylan
+        global George
+        global Daniel
+        username = message.author.display_name
+        if username == "[Disturbed]EagerGeographerSebas":
+            Sebas += random.randint(1,50)
+            saveFile = open('sebas.txt','w')
+            saveFile.write(str(Sebas))
+            saveFile.close()
+            await client.send_message(message.channel, "You have: $" + str(Sebas))
+        elif username == "[Ultimate] GodGeographer":
+            Nico += random.randint(1, 50)
+            saveFile = open('nico.txt', 'w')
+            saveFile.write(str(Sebas))
+            saveFile.close()
+            await client.send_message(message.channel, "You have: $" + str(Nico))
+        elif username == "youtube.com/sirmarvel":
+            Cooper += random.randint(1, 50)
+            saveFile = open('cooper.txt', 'w')
+            saveFile.write(str(Sebas))
+            saveFile.close()
+            await client.send_message(message.channel, "You have: $" + str(Cooper))
+        elif username == "[Corner] Eager Geographer Dora":
+            Dora += random.randint(1, 50)
+            saveFile = open('dora.txt', 'w')
+            saveFile.write(str(Sebas))
+            saveFile.close()
+            await client.send_message(message.channel, "You have: $" + str(Dora))
+        elif username == "Hamilton Geographer":
+            Jack += random.randint(1, 50)
+            saveFile = open('jack.txt', 'w')
+            saveFile.write(str(Sebas))
+            saveFile.close()
+            await client.send_message(message.channel, "You have: $" + str(Jack))
+        elif username == "[Snake Duck] Kieran":
+            Kieran += random.randint(1, 50)
+            saveFile = open('kieran.txt', 'w')
+            saveFile.write(str(Sebas))
+            saveFile.close()
+            await client.send_message(message.channel, "You have: $" + str(Kieran))
+        elif username == "[Ant] Nathan the lonely boy":
+            Nathan += random.randint(1, 50)
+            saveFile = open('nathan.txt', 'w')
+            saveFile.write(str(Sebas))
+            saveFile.close()
+            await client.send_message(message.channel, "You have: $" + str(Nathan))
+        elif username == "[Aqui] Gay lol":
+            Dylan += random.randint(1, 50)
+            saveFile = open('dylan.txt', 'w')
+            saveFile.write(str(Sebas))
+            saveFile.close()
+            await client.send_message(message.channel, "You have: $" + str(Dylan))
+        elif username == "MythicDragon69":
+            George += random.randint(1, 50)
+            saveFile = open('george.txt', 'w')
+            saveFile.write(str(Sebas))
+            saveFile.close()
+            await client.send_message(message.channel, "You have: $" + str(George))
+        elif username == "[Dunno]VetGeographer Aqui":
+            Aqui += random.randint(1, 50)
+            saveFile = open('aqui.txt', 'w')
+            saveFile.write(str(Sebas))
+            saveFile.close()
+            await client.send_message(message.channel, "You have: $" + str(Aqui))
+        elif username == "[imposter] Derpel":
+            Daniel += random.randint(1, 50)
+            saveFile = open('daniel.txt', 'w')
+            saveFile.write(str(Sebas))
+            saveFile.close()
+            await client.send_message(message.channel, "You have: $" + str(Daniel))
+        else:
+            await client.send_message(message.channel, "Sorry but it appears you are not in the system, if you have changed your name or are a new memeber, DM [Disturbed]EagerGeographerSebas for help")
+
+    if message.content == "money":
+        username = message.author.display_name
+        if username == "[Disturbed]EagerGeographerSebas":
+            await client.send_message(message.channel, "You have: $" + str(Sebas))
+        if username == "[Ultimate] GodGeographer":
+            await client.send_message(message.channel, "You have: $" + str(Nico))
+        if username == "youtube.com/sirmarvel":
+            await client.send_message(message.channel, "You have: $" + str(Cooper))
+        if username == "[Corner] Eager Geographer Dora":
+            await client.send_message(message.channel, "You have: $" + str(Dora))
+        if username == "Hamilton Geographer":
+            await client.send_message(message.channel, "You have: $" + str(Jack))
+        if username == "[Snake Duck] Kieran":
+            await client.send_message(message.channel, "You have: $" + str(Kieran))
+        if username == "[Ant] Nathan the lonely boy":
+            await client.send_message(message.channel, "You have: $" + str(Nathan))
+        if username == "[Aqui] Gay lol":
+            await client.send_message(message.channel, "You have: $" + str(Dylan))
+        if username == "MythicDragon69":
+            await client.send_message(message.channel, "You have: $" + str(George))
+        if username == "[Dunno]VetGeographer Aqui":
+            await client.send_message(message.channel, "You have: $" + str(Aqui))
+        if username == "[imposter] Derpel":
+            await client.send_message(message.channel, "You have: $" + str(Daniel))
+
+    if message.content == "help":
+        await client.send_message(message.channel, "`work - earn $1-$50\nmoney - display current balance\npokefuwow - quality images\naqui - rare sightings of Aqui\ndad - just try it`")
+
+    if message.content == "buy cardboard":
+        global currUsername
+        global testUsername
+        testUsername = message.author.display_name
+        print(currUsername)
+        if testUsername == currUsername or "1":
+            currUsername = message.author.display_name
+            print("in here")
+        else:
+            await client.send_message(message.channel, "Wait until the other person is done using buy command")
+    if message.content == "yes":
+        username = message.author.display_name
+        if currUsername == username:
+            await client.send_message(message.channel, "You bought a cardboard box!")
+    if message.author.display_name == "[Dunno]VetGeographer Aqui":
+        await client.delete_message(message)
+        await client.send_message(message.channel, "Aqui sucks")
+client.run("NTYyMDgzNjk5OTc0MjA5NTM2.XKFncQ.odTLXBBwRml3afMWMJE2FmYo6k0")
