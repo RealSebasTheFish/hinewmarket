@@ -1,1 +1,1 @@
-web: gunicorn python:app $PORT 5432
+web: gunicorn python:app
