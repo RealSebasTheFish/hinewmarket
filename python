@@ -279,4 +279,5 @@ async def on_message(message):
     if message.author.display_name == "[Dunno]VetGeographer Aqui":
         await client.delete_message(message)
         await client.send_message(message.channel, "Aqui sucks")
-client.run("NTYyMDgzNjk5OTc0MjA5NTM2.XKFncQ.odTLXBBwRml3afMWMJE2FmYo6k0")
+        
+client.run("NTYyMDgzNjk5OTc0MjA5NTM2.XKU3Mg.h4_gVmIFXPMdPz96jvaqU49nzjg")
