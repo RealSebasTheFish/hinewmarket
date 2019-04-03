@@ -1,1 +1,1 @@
-worker: node pythonraw.py
+web: node pythonraw.py
